@@ -4,6 +4,7 @@
 
 const math=require("./math");
 
-math.add(2,7);
-math.sub(6,2);
+console.log(`addition is${math.add(2,7)}`);
+console.log(`Subtraction is${math.sub(6,2)}`);
+
 
