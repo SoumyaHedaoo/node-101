@@ -19,14 +19,22 @@ const fs=require("fs");
 const http=require("http");
 
 const myserver=http.createServer((req,res)=>{
+   
     if(req.url==="/favicon.ico"){return; }
+    
     const x=new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
 
     fs.appendFile("log.txt" ,`${x} : user accessed: ${req.url}\n` , (err , data)=>{
-        res.end("hii the server is ready to use")
-        console.log("new acces granted")
-
+        switch(req.url){
+            case '/' : res.end("nothing but this")
+            break;
+            case'/about' : res.end("yeah i am batman💀")
+            break;
+            case '/end' : res.end('you have reached end')
+            break;
+            default : res.end("dont be oversmart")
+        }
     });
 })
 
-myserver.listen(8000 , ()=>{console.log("server started")}); 
+myserver.listen(8000); 
