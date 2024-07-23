@@ -7,6 +7,18 @@ const port=8000;
 /// middle ware
 app.use(express.urlencoded({extended : false}));
 
+//implemented user-defined mddleware
+
+app.use((req , res , next)=>{
+    req.errror="404-error not found!!";
+    console.log("hello from mddleware");
+    next();
+
+})
+app.use((req , res , next)=>{
+    res.end(req.errror);
+})
+
 // get and post requests
 //post request testes in postman
 app.route("/api/users")
