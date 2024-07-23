@@ -16,7 +16,8 @@ app.use((req , res , next)=>{
 
 })
 app.use((req , res , next)=>{
-    res.end(req.errror);
+    console.log("hello i am 2nd middleware");
+    next();
 })
 // get and post requests
 //post request testes in postman
