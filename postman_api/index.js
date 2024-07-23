@@ -18,7 +18,6 @@ app.use((req , res , next)=>{
 app.use((req , res , next)=>{
     res.end(req.errror);
 })
-
 // get and post requests
 //post request testes in postman
 app.route("/api/users")
