@@ -1,0 +1,21 @@
+
+GET
+
+DONE ---- get/users/ ----> get all users in html format
+get/users/:id -----> get users with given id in html format
+
+get/api/users/ ----->get all users in json format
+get/api/users/:id ----->get users with given id in json format
+
+
+POST
+
+post/users/ ---->create new users 
+
+PATCH
+
+patch/users/:id -----> upadte user with given id
+
+DELETE
+
+delete/users/:id ------>delete users with given id
