@@ -7,7 +7,7 @@ function addNewLogEntry(filename){
         const x=new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
         fs.appendFile(
             filename , 
-            `Date : ${x} -> ${req.ip} -> ${req.url}` , 
+            `\n Date : ${x} -> ${req.ip} -> ${req.url}` , 
             (err , data)=>{
                 next();
             }
